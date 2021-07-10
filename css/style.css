@@ -1,0 +1,234 @@
+/***** MOBILE FIRST *******/ 
+
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Bad Script', cursive;
+    overflow-x: hidden;
+    
+}
+
+body {
+    background-color: #f8ffe5;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: aquamarine;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 19px;
+    font-style: italic;
+    
+}
+p{
+    margin: 5px;
+}
+a{
+    text-decoration: none;
+    color: #ef476f;
+}
+
+main {
+    background-color: #f8ffe5;
+    margin-top: 20%;
+    height: 100%;
+    width: 100%;
+}
+
+input {
+    visibility: hidden;
+}
+label{
+    font-size: 30px;
+}
+
+legend {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    color: #e48e88;
+    margin: 0px;
+}
+
+.boxOne, .boxTwo, .boxThree, .boxFour {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.boxOne {
+    background-color: #06d6a0;
+}
+
+.boxTwo {
+    background-color: #1b9aaa;
+}
+
+.boxThree {
+    background-color: #ef476f;
+}
+
+.boxFour {
+    background-color: #ffc43d;
+}
+footer{
+    margin-top: 6%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+.sendButton{
+    visibility: inherit;
+    width: 100px;
+
+}
+.sendButton{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+/* Animations */ 
+
+.boxOne:hover{
+    cursor: pointer;
+    box-shadow: 3px 1px 10px black
+}
+.boxTwo:hover{
+    cursor: pointer;
+    box-shadow: 3px 1px 10px black
+}
+.boxThree:hover{
+    cursor: pointer;
+    box-shadow: 3px 1px 10px black
+}
+.boxFour:hover{
+    cursor: pointer;
+    box-shadow: 3px 1px 10px black
+}
+.sendButton:hover{
+    cursor: pointer;
+    box-shadow: 1px 1px 10px black
+}
+.boxOne:active{
+    box-shadow: -1px -1px 1px #000;
+    background-color: #0dc594;
+}
+.boxTwo:active{
+    box-shadow: -1px -1px 1px #000;
+    background-color: #1a8a99;
+}
+.boxThree:active{
+    box-shadow: -1px -1px 1px #000;
+    background-color: #d84063;
+}
+.boxFour:active{
+    box-shadow: -1px -1px 1px #000;
+    background-color: #e2af37;
+}
+
+
+
+/******************* MEADIA QUERY ***************************/
+
+/* Tablets since 768px screen*/
+
+@media screen and (min-width: 768px) {
+    *{
+        font-size: 1.1em;
+    }
+    header, h2{
+        font-size: 1.5em;
+        
+    }
+    main {
+        display: flex;
+        justify-content: center;
+    }
+    form {
+        width: 95%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    legend{
+        font-size: 1.5em;
+    }
+    article {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    label {
+        margin-left: 40px;
+        margin-top: 20px;
+    }
+    .boxOne, .boxTwo, .boxThree, .boxFour {
+        width: 250px;
+        height: 80px;
+    }
+    .sendButton{
+        width: 20%;
+        margin-top: 10%;
+    }
+}
+
+/* Computers since 1366px screen */
+
+@media screen and (min-width: 1366px) {
+    header {
+        display: flex;
+        align-items: center;
+        font-size: 50px;
+    }
+    p {
+        font-size: 1em;
+    }
+    h2{
+        font-size: 1.4em;
+    }
+    legend{
+        font-size: 2.2em;
+    }
+    main {
+        display: flex;
+        justify-content: center;
+        margin: 0px;
+    }
+    form {
+        width: 80%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    section {
+        display: flex;
+        width: 60%;
+        flex-wrap: wrap;
+    }
+    label {
+        margin-left: 40px;
+        margin-top: 20px;
+        font-size: 30px;
+    }
+    .boxOne, .boxTwo, .boxThree, .boxFour {
+        width: 250px;
+        height: 80px;
+    }
+    legend {
+        margin-top: 100px;
+    }
+    .sendButton{
+        margin-top: 10%;
+    }
+}
