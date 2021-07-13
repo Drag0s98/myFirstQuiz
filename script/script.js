@@ -1,77 +1,83 @@
+const preguntasCorrectas = {
+    primera : "paris",
+    segunda : "malagueño",
+    tercera : "atlantico",
+    cuarta : "ankara",
+    quinta : "rusia"
+
+}
+
 document.querySelector('form[name="formulario"]').addEventListener('submit', (event) => {
     event.preventDefault()
 
-    // Constructor con la respuestas correctas // 
-    const respuestas = {
-        sena: document.querySelector('input[value="paris"]:checked'),
-        malaga: document.querySelector('input[value="malagueño"]:checked'),
-        canarias: document.querySelector('input[value="atlantico"]:checked'),
-        turquia: document.querySelector('input[value="ankara"]:checked'),
-        volga: document.querySelector('input[value="rusia"]:checked')
+    let respuestaUno = event.target.elements['sena'].value;
+    let respuestaDos =  event.target.elements['malaga'].value;
+    let respuestaTres =  event.target.elements['canarias'].value;
+    let respuestaCuatro =  event.target.elements['turquia'].value;
+    let respuestaCinco =  event.target.elements['volga'].value;
+
+    let labelsUno = document.querySelectorAll('#formulario > section.questionOne > article > label')
+    let labelsDos = document.querySelectorAll('#formulario > section.questionTwo > article > label')
+    let labelsTres = document.querySelectorAll('#formulario > section.questionThree > article > label')
+    let labelsCuatro = document.querySelectorAll('#formulario > section.questionFour > article > label')
+    let labelsCinco = document.querySelectorAll('#formulario > section.questionFive > article > label')
+
+    // Pregunta uno 
+    if(respuestaUno == preguntasCorrectas.primera){
+        labelsUno[2].style.backgroundColor = "#2CE271"
+    }else if (respuestaUno == "praga"){
+        labelsUno[0].style.backgroundColor = "red"
+    }else if(respuestaUno == "madrid"){
+        labelsUno[1].style.backgroundColor = "red"
+    }else if(respuestaUno == "lisboa"){
+        labelsUno[3].style.backgroundColor = "red"
     }
 
-    // SOLUCION LARGA DONDE SE MUESTRAN LAS RESPUESTAS INCORRECTAS //
-
-    if (respuestas.sena) {
-        console.log("Pregunta uno correcta!");
-        document.querySelector('label[class="boxThree"]').style.backgroundColor = "#2CE271"
-
-    } else {
-        console.log("Pregunta uno incorrecta")
-
+    // Pregunta dos
+    if(respuestaDos == preguntasCorrectas.segunda){
+        labelsDos[0].style.backgroundColor = "#2CE271"
+    }else if (respuestaDos == "malaguiniano"){
+        labelsDos[1].style.backgroundColor = "red"
+    }else if(respuestaDos == "malagano"){
+        labelsDos[2].style.backgroundColor = "red"
+    }else if(respuestaDos == "malaguense"){
+        labelsDos[3].style.backgroundColor = "red"
     }
 
-    if (respuestas.malaga) {
-        console.log("Pregunta dos correcta!");
-        document.querySelector('section[name="questionTwo"]').querySelector('label[class="boxOne"]').style.backgroundColor = "#2CE271"
-
-
-    } else {
-        console.log("Pregunta dos incorrecta")
-    }
-    if (respuestas.canarias) {
-        console.log("Pregunta tres correcta!");
-        document.querySelector('section[name="questionThree"]').querySelector('label[class="boxThree"]').style.backgroundColor = "#2CE271"
-
-
-    } else {
-        console.log("Pregunta tres incorrecta")
-    }
-    if (respuestas.turquia) {
-        console.log("Pregunta cuatro correcta!");
-        document.querySelector('section[name="questionFour"]').querySelector('label[class="boxTwo"]').style.backgroundColor = "#2CE271"
-
-
-    } else {
-        console.log("Pregunta cuatro incorrecta")
-    }
-    if (respuestas.volga) {
-        console.log("Pregunta cinco correcta!");
-        document.querySelector('section[name="questionFive"]').querySelector('label[class="boxThree"]').style.backgroundColor = "#2CE271"
-
-
-
-    } else {
-        console.log("Pregunta cinco incorrecta")
+    //Pregunta tres 
+    if(respuestaTres == preguntasCorrectas.tercera){
+        labelsTres[2].style.backgroundColor = "#2CE271"
+    }else if (respuestaTres == "pacifico"){
+        labelsTres[0].style.backgroundColor = "red"
+    }else if(respuestaTres == "indico"){
+        labelsTres[1].style.backgroundColor = "red"
+    }else if(respuestaTres == "mediterraneo"){
+        labelsTres[3].style.backgroundColor = "red"
     }
 
+    //Pregunta cuatro
+    if(respuestaCuatro == preguntasCorrectas.cuarta){
+        labelsCuatro[1].style.backgroundColor = "#2CE271"
+    }else if (respuestaCuatro == "estambul"){
+        labelsCuatro[0].style.backgroundColor = "red"
+    }else if(respuestaCuatro == "esmirna"){
+        labelsCuatro[2].style.backgroundColor = "red"
+    }else if(respuestaCuatro == "konya"){
+        labelsCuatro[3].style.backgroundColor = "red"
+    }
 
-    /*
-        // SOLUCION CORTA  //  
-        let validation = document.querySelector('input[value="paris"]:checked') 
-            && document.querySelector('input[value="malagueño"]:checked') 
-            && document.querySelector('input[value="atlantico"]:checked') 
-            && document.querySelector('input[value="ankara"]:checked')
-            && document.querySelector('input[value="rusia"]:checked');
+    //Pregunta cinco 
+    if(respuestaCinco == preguntasCorrectas.quinta){
+        labelsCinco[2].style.backgroundColor = "#2CE271"
+    }else if (respuestaCinco == "lituania"){
+        labelsCinco[0].style.backgroundColor = "red"
+    }else if(respuestaCinco == "ucrania"){
+        labelsCinco[1].style.backgroundColor = "red"
+    }else if(respuestaCinco == "bielorus"){
+        labelsCinco[3].style.backgroundColor = "red"
+    }
     
-        if (validation) {
-            console.log("perfecto");
-        }
-        else {
-            console.log("Formulario incorrecto, vuelva a intentarlo");
-        }*/
-
-
+    
 
 
 })
