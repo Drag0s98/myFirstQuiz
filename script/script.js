@@ -6,10 +6,11 @@ const preguntasCorrectas = {
     quinta : "rusia"
 
 }
-
+ // Inicializamos el formulario.
 document.querySelector('form[name="formulario"]').addEventListener('submit', (event) => {
     event.preventDefault()
 
+    //Extraemos el valor de las respuestas
     let respuestaUno = event.target.elements['sena'].value;
     let respuestaDos =  event.target.elements['malaga'].value;
     let respuestaTres =  event.target.elements['canarias'].value;
